@@ -6,6 +6,15 @@
 -  Responsive
 -  Simplistic but animation heavy (esp scroll animations)
 
+### Nav Tabs:
+
+-  About
+-  Projects
+-  Socials on the right side as buttons
+   -  Github
+   -  Twitter
+   -  LinkedIn
+
 ### To do:
 
 -  Simplistic nav on the side representing each "slide" were on
@@ -19,3 +28,7 @@
       -  Projects demo
       -  Brief description
       -  Lessons / challenges
+
+## Tentative wireframe of layout
+
+![wireframe](/public/wireframe.png)

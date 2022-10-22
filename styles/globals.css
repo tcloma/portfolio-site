@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.page {
+   @apply flex flex-col items-center justify-center bg-gray-700 px-[20%] text-white;
+}
+
+.slide {
+   @apply flex min-w-full items-center justify-between;
+}
