@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/future/image";
-import headshot from "/public/fish.png";
+import headshot from "/public/placeholder_light.png";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { projectData } from "../public/projectData";
 import { useState } from "react";
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                <h1 className="text-7xl"> Tyrone Cloma </h1>
                <h3 className="text-2xl text-yellow-300"> Software Engineer </h3>
             </div>
-            <Image src={headshot} alt="headshot" width={250} height={250} />
+            <Image src={headshot} alt="headshot" width={600} height={800} />
          </section>
 
          <nav className="sticky top-0 flex w-full justify-start gap-2 border-b-2 bg-gray-700 p-4">
