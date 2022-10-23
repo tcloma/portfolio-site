@@ -3,8 +3,13 @@ import Head from "next/head";
 import Image from "next/future/image";
 import headshot from "/public/fish.png";
 import ProjectShowcase from "../components/ProjectShowcase";
+import { projectData } from "../public/projectData";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+   // Colorizing nav bar
+   const [section, setSection] = useState("about");
+
    return (
       <main className="page">
          <Head>
@@ -22,7 +27,7 @@ const Home: NextPage = () => {
             <Image src={headshot} alt="headshot" width={250} height={250} />
          </section>
 
-         <nav className="flex w-full justify-start gap-2 border-b-2">
+         <nav className="sticky top-0 flex w-full justify-start gap-2 border-b-2 bg-gray-700 p-4">
             <a href="#about"> About </a>
             <a href="#projects"> Projects </a>
             <a href="#socials"> Socials </a>
@@ -38,10 +43,9 @@ const Home: NextPage = () => {
          </section>
 
          <section id="projects" className="flex min-w-full flex-col">
-            {/* Map over each project */}
-            <ProjectShowcase />
-            <ProjectShowcase />
-            <ProjectShowcase />
+            {projectData.map((project, index) => {
+               return <ProjectShowcase key={index} projectData={project} />;
+            })}
          </section>
 
          <section id="socials">

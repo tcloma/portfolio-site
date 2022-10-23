@@ -1,43 +1,49 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Image from "next/future/image";
 import TechChip from "./TechChip";
 import projectPreview from "/public/fish.png";
+import demoPreview from "/public/placeholder.png";
+import { IProjData } from "../public/projectData";
 
-interface IProps {}
+interface IProps {
+   projectData: IProjData;
+}
 
-const ProjectShowcase: FC<IProps> = () => {
-   const exTechArr = ["React", "TypeScript", "TailwindCSS"];
+const ProjectShowcase: FC<IProps> = ({ projectData }) => {
+   const { title, stack, description, previewLink, demoLink } = projectData;
+   const [showDemo, setShowDemo] = useState(false);
 
    return (
       <article className="slide min-h-max p-10">
-         <div className="flex flex-col gap-2">
+         <div className="flex w-1/3 flex-col gap-2">
             <div className="flex flex-row justify-evenly border-t-2 p-2">
-               <button> Preview </button>
-               <button> Demo </button>
+               <button onClick={() => setShowDemo(false)}> Preview </button>
+               <button onClick={() => setShowDemo(true)}> Demo </button>
             </div>
-            <Image
-               src={projectPreview}
-               alt="project preview"
-               width={400}
-               height={600}
-            />
+            {showDemo ? (
+               <Image
+                  src={demoPreview}
+                  alt="project demo"
+                  width={400}
+                  height={600}
+               />
+            ) : (
+               <Image
+                  src={projectPreview}
+                  alt="project preview"
+                  width={400}
+                  height={600}
+               />
+            )}
          </div>
-         <div className="flex flex-col gap-2">
-            <h1 className="text-4xl text-red-400"> Project title</h1>
+         <div className="flex w-2/3 flex-col gap-2">
+            <h1 className="text-4xl text-red-400">{title}</h1>
             <div className="flex flex-row gap-2">
-               {exTechArr.map((item, index) => {
+               {stack.map((item, index) => {
                   return <TechChip key={index} item={item} />;
                })}
             </div>
-            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               <br />
-               Cupiditate accusantium ut in odit corrupti explicabo quidem
-               <br />
-               sit voluptate, esse ducimus. Dolorum rem ut optio ea
-               <br />
-               doloremque est laborum totam sit.
-            </p>
+            <p>{description}</p>
          </div>
       </article>
    );
