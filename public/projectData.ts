@@ -9,7 +9,7 @@ export interface IProjData {
 export const projectData: Array<IProjData> = [
    {
       title: 'Hover Note',
-      stack: ['TypeScript', 'React', 'Redux', 'Electron.js', 'Chakra UI'],
+      stack: ['TypeScript', 'React', 'Redux', 'Electron.js', 'ChakraUI'],
       description: 'Hover Note is a markdown sticky notes application designed to provide a more comprehensive and extensible experience when taking and refercing notes',
       previewLink: '',
       demoLink: ''

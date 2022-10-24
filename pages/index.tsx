@@ -5,10 +5,13 @@ import headshot from "/public/placeholder_light.png";
 import ProjectShowcase from "../components/ProjectShowcase";
 import { projectData } from "../public/projectData";
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
 
 const Home: NextPage = () => {
    // Colorizing nav bar
    const [section, setSection] = useState("about");
+   const nav = ["About", "Project", "Socials"];
 
    return (
       <main className="page">
@@ -19,18 +22,24 @@ const Home: NextPage = () => {
             <link rel="icon" href="/favicon.ico" />
          </Head>
 
-         <section className="slide">
+         <section className="slide mt-10">
             <div>
-               <h1 className="text-7xl"> Tyrone Cloma </h1>
-               <h3 className="text-2xl text-yellow-300"> Software Engineer </h3>
+               <h1 className="text-7xl font-semibold"> Tyrone Cloma </h1>
+               <h3 className="text-2xl text-dYellow"> Software Engineer </h3>
             </div>
             <Image src={headshot} alt="headshot" width={600} height={800} />
          </section>
 
-         <nav className="sticky top-0 flex w-full justify-start gap-2 border-b-2 bg-gray-700 p-4">
-            <a href="#about"> About </a>
-            <a href="#projects"> Projects </a>
-            <a href="#socials"> Socials </a>
+         <nav className="min-h-10 sticky top-0 flex min-w-full items-center justify-start border-b-2 bg-dBg">
+            <a href="#about" className="navBtn">
+               About
+            </a>
+            <a href="#projects" className="navBtn">
+               Projects
+            </a>
+            <a href="#socials" className="navBtn">
+               Socials
+            </a>
          </nav>
 
          <section id="about" className="slide h-96">
@@ -38,7 +47,13 @@ const Home: NextPage = () => {
                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                Cupiditate accusantium ut in odit corrupti explicabo quidem sit
                voluptate, esse ducimus. Dolorum rem ut optio ea doloremque est
-               laborum totam sit.
+               laborum totam sit. Lorem ipsum dolor sit amet consectetur
+               adipisicing elit. Reiciendis, quo maxime molestiae magnam magni
+               tempora doloribus quas eaque nam sint labore minima unde omnis a
+               reprehenderit natus doloremque dicta illo. Lorem ipsum, dolor sit
+               amet consectetur adipisicing elit. Ratione aliquam veritatis a.
+               Cum, rem laudantium laborum molestias et consequatur dolores eius
+               iure ea delectus sunt ex officia perferendis suscipit quaerat.
             </p>
          </section>
 
