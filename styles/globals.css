@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .page {
-   @apply flex flex-col items-center justify-center bg-dBg px-[10%] text-dWhite lg:px-[15%];
+   @apply flex flex-col items-center justify-center bg-dBg text-dWhite;
 }
 
 .slide {
-   @apply flex min-w-full flex-col items-center justify-between lg:flex-row;
+   @apply flex min-w-full flex-col items-center justify-between px-[10%] lg:flex-row lg:px-[15%];
 }
 
 .navBtn {
-   @apply p-4 font-semibold hover:bg-dOffBg hover:text-dYellow;
+   @apply rounded-md p-4 font-semibold hover:bg-dOffBg hover:text-dCyan;
 }
