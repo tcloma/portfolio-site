@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .page {
-   @apply flex flex-col items-center justify-center bg-dBg text-dWhite;
+   @apply flex min-h-screen flex-col items-center justify-center bg-dBg text-dWhite;
 }
 
 .slide {
@@ -11,5 +11,9 @@
 }
 
 .navBtn {
-   @apply rounded-md p-4 font-semibold hover:bg-dOffBg hover:text-dCyan;
+   @apply hover:text-dCyan;
+}
+
+.socialBtn {
+   @apply w-1/3 hover:text-dCyan;
 }
