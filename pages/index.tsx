@@ -1,50 +1,59 @@
 import type { NextPage } from 'next'
 import Image from 'next/future/image'
-import headshot from '/public/images/placeholder_light.png'
-import { useState } from 'react'
+import headshot from '/public/images/placeholders/placeholder-headshot.png'
+import { useRouter } from 'next/router'
 
 const Home: NextPage = () => {
+   const router = useRouter()
+
    return (
-      <main className='page scroll-smooth'>
-         <section className='slide mt-10'>
-            <div className='flex w-full flex-col gap-1'>
+      <main className='page'>
+         <section className='slide mt-10 gap-8'>
+            <Image
+               className='block rounded-full lg:hidden'
+               src={headshot}
+               alt='headshot'
+               width={250}
+               height={250}
+            />
+            <div className='flex w-full flex-col gap-4'>
                <h1 className='text-5xl font-semibold lg:text-7xl'>
                   Tyrone Cloma
                </h1>
-               <h3 className='text-lg text-dCyan lg:text-2xl'>
+               <h1 className='text-lg text-dCyan lg:text-3xl'>
                   Software Engineer
-               </h3>
-               <div className='flex gap-1'>
-                  <button className='rounded-md bg-dPurple py-2 px-4'>
-                     Resume
+               </h1>
+               <div className='text-xl font-normal'>
+                  <p>
+                     Fullstack Developer based in NewYork ; Flatiron Graduate
+                  </p>
+                  <p>I create responsive and efficient web applications</p>
+               </div>
+
+               <div className='flex gap-2 text-xl'>
+                  <button
+                     onClick={() => router.push('/projects')}
+                     className='rounded-md bg-dPurple py-2 px-8 font-semibold shadow-md hover:bg-dWhite hover:text-dPurple'
+                  >
+                     Projects
                   </button>
-                  <button className='rounded-md bg-dPurple py-2 px-4'>
+                  <button
+                     onClick={() => router.push('/contact')}
+                     className='rounded-md bg-dBlue py-2 px-8 font-semibold shadow-md hover:bg-dWhite hover:text-dBlue'
+                  >
                      Contact Me
                   </button>
                </div>
             </div>
             <Image
-               className='hidden lg:block'
+               className='hidden rounded-full lg:block'
                src={headshot}
                alt='headshot'
                width={600}
                height={800}
             />
          </section>
-         <section id='about' className='slide h-96'>
-            <p>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Cupiditate accusantium ut in odit corrupti explicabo quidem sit
-               voluptate, esse ducimus. Dolorum rem ut optio ea doloremque est
-               laborum totam sit. Lorem ipsum dolor sit amet consectetur
-               adipisicing elit. Reiciendis, quo maxime molestiae magnam magni
-               tempora doloribus quas eaque nam sint labore minima unde omnis a
-               reprehenderit natus doloremque dicta illo. Lorem ipsum, dolor sit
-               amet consectetur adipisicing elit. Ratione aliquam veritatis a.
-               Cum, rem laudantium laborum molestias et consequatur dolores eius
-               iure ea delectus sunt ex officia perferendis suscipit quaerat.
-            </p>
-         </section>
+         <section id='about' className='slide h-96'></section>
       </main>
    )
 }

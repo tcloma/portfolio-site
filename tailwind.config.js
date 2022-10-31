@@ -20,6 +20,9 @@ module.exports = {
             dRed: '#ff5555',
             dYellow: '#f1fa8c'
          },
+         fontFamily: {
+            varela: ["Varela", "sans-serif"]
+         }
       },
    },
    plugins: [],
