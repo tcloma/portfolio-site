@@ -3,7 +3,7 @@ import { FC } from 'react'
 interface IProps {
    icon: any
    text: string
-   onClick: any
+   onClick?: any
 }
 
 const IconText: FC<IProps> = ({ icon, text, onClick }) => {
