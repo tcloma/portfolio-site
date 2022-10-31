@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                </h1>
                <div className='text-xl font-normal'>
                   <p>
-                     Fullstack Developer based in NewYork ; Flatiron Graduate
+                     Fullstack Developer based in NewYork & Flatiron Graduate
                   </p>
                   <p>I create responsive and efficient web applications</p>
                </div>

@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import type { AppProps } from 'next/app'
 import Layout from '../components/layouts/Layout'
+import Transition from '../components/layouts/Transition'
 
 function MyApp({ Component, pageProps }: AppProps) {
    return (
@@ -32,7 +33,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             <link rel='manifest' href='/icons/site.webmanifest' />
          </Head>
          <Layout>
-            <Component {...pageProps} />
+            <Transition>
+               <Component {...pageProps} />
+            </Transition>
          </Layout>
       </>
    )

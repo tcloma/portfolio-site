@@ -12,6 +12,7 @@
 @layer base {
    html {
       font-family: 'Varela', sans-serif;
+      background-color: #282a36;
    }
 }
 
