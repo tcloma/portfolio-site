@@ -10,7 +10,10 @@ const ProjectCard: FC<IProps> = ({ projectData }) => {
    const { title, stack, description, previewLink, demoLink } = projectData
 
    return (
-      <article className='flex min-h-[24rem] w-96 flex-col gap-4 rounded-md bg-dWhite pb-4 text-dBg shadow-md'>
+      <article
+         onClick={() => window.open(demoLink)}
+         className='flex min-h-[24rem] w-96 flex-col gap-4 rounded-md bg-dWhite pb-4 text-dBg shadow-md'
+      >
          <Image
             src={previewLink}
             alt='Project preview'
