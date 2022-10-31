@@ -23,14 +23,14 @@ export const projectData: Array<IProjData> = [
    },
    {
       title: 'Cosmo Quizzer',
-      stack: ['React', 'Firebase', 'SASS'],
+      stack: ['JavaScript', 'React', 'Firebase', 'SASS'],
       description: 'A thematic quiz game where your role is to test the knowledge of different species throughout your galaxy in JavaScript and React.js programming!',
       previewLink: '/images/previews/cosmo-quizzer-preview.png',
       demoLink: 'https://github.com/tcloma/Cosmo-Quizzer-FIS'
    },
    {
       title: 'Kaijugochi',
-      stack: ['Svelte', 'TailwindCSS', 'Go'],
+      stack: ['JavaScript', 'Svelte', 'TailwindCSS', 'Go'],
       description: 'A simple browser game where you can create your own monster and care for it by feeding it other monsters that appear on screen',
       previewLink: '/images/previews/kaijugochi-preview.png',
       demoLink: 'https://github.com/tcloma/Monster-Game-FIS'
