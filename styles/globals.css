@@ -18,7 +18,7 @@
 
 @layer components {
    .page {
-      @apply flex min-h-screen flex-col items-center justify-center bg-dBg text-dWhite;
+      @apply flex min-h-screen flex-col items-center justify-center bg-dBg text-dWhite lg:pt-0;
    }
    .input-field {
       @apply rounded-md p-4;
@@ -42,9 +42,9 @@
 }
 
 .navBtn {
-   @apply hover:text-dCyan;
+   @apply min-w-[30px]  hover:text-dCyan lg:w-full;
 }
 
 .navBtnClicked {
-   @apply text-dCyan;
+   @apply min-w-[30px]  text-dCyan lg:w-full;
 }

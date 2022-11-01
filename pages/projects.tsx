@@ -4,8 +4,8 @@ import ProjectCard from '../components/ProjectCard'
 
 const Projects: NextPage = () => {
    return (
-      <main className='page'>
-         <section className='flex w-full flex-col items-center justify-center gap-10 lg:flex-row lg:gap-4'>
+      <main className='page pt-[20px] lg:pt-0'>
+         <section className='flex w-[90%] flex-col flex-wrap items-center justify-center gap-10 pt-[5rem] lg:flex-row lg:gap-4'>
             {projectData.map((project, index) => (
                <ProjectCard key={index} projectData={project} />
             ))}

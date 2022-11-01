@@ -17,13 +17,15 @@ const Home: NextPage = () => {
                height={250}
             />
             <div className='flex w-full flex-col gap-4'>
-               <h1 className='text-5xl font-semibold lg:text-7xl'>
-                  Tyrone Cloma
-               </h1>
-               <h1 className='text-lg text-dCyan lg:text-3xl'>
-                  Software Engineer
-               </h1>
-               <div className='text-xl font-normal'>
+               <div>
+                  <h1 className='text-4xl font-semibold lg:text-7xl'>
+                     Tyrone Cloma
+                  </h1>
+                  <h1 className='text-xl text-dCyan lg:text-3xl'>
+                     Software Engineer
+                  </h1>
+               </div>
+               <div className='text-xl'>
                   <p>
                      Fullstack Developer based in NewYork & Flatiron Graduate
                   </p>
@@ -41,7 +43,7 @@ const Home: NextPage = () => {
                      onClick={() => router.push('/contact')}
                      className='rounded-md bg-dBlue py-2 px-8 font-semibold shadow-md hover:bg-dWhite hover:text-dBlue'
                   >
-                     Contact Me
+                     Contact
                   </button>
                </div>
             </div>
@@ -53,7 +55,7 @@ const Home: NextPage = () => {
                height={800}
             />
          </section>
-         <section id='about' className='slide h-96'></section>
+         <section id='about' className='slide lg:h-96'></section>
       </main>
    )
 }

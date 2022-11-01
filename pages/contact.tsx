@@ -22,13 +22,13 @@ const Contact: NextPage = () => {
    }
 
    return (
-      <main className='page lg:flex-row lg:justify-evenly '>
-         <section className='half-section gap-4  bg-dBg'>
+      <main className='page pt-[20px] lg:flex-row lg:justify-evenly lg:pt-0 '>
+         <section className='half-section gap-4 bg-dBg'>
             <h1 className='text-5xl font-semibold text-dCyan'> Contact Me </h1>
-            <form className='relative flex flex-col gap-4 text-black'>
+            <form className='relative flex w-[85%] flex-col gap-4 text-black lg:w-auto'>
                <div className='flex flex-row gap-3'>
-                  <input className='input-field' placeholder='Name' />
-                  <input className='input-field' placeholder='Email' />
+                  <input className='input-field w-1/2' placeholder='Name' />
+                  <input className='input-field w-1/2' placeholder='Email' />
                </div>
                <input className='input-field' placeholder='Subject' />
                <textarea

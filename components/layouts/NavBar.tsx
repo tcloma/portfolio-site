@@ -15,8 +15,8 @@ const NavBar: FC = () => {
    }
 
    return (
-      <nav className='fixed top-0 z-10 hidden min-h-screen w-[5rem] flex-col items-center justify-center bg-dDbg py-5 text-white lg:flex'>
-         <div className='flex w-1/3 flex-col gap-10'>
+      <nav className='fixed top-0 z-10 flex w-full flex-row items-center justify-center bg-dDbg py-5 text-white lg:min-h-screen lg:w-[5rem] lg:flex-col'>
+         <div className='flex w-1/3 flex-row items-center justify-center gap-10 lg:flex-col'>
             <button className={checkPage('/')} onClick={() => router.push('/')}>
                <FontAwesomeIcon icon={faHouse} />
             </button>
