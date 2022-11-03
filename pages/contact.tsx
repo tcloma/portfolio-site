@@ -47,7 +47,7 @@ const Contact: NextPage = () => {
          <section className='half-section gap-4 bg-dOffBg'>
             <IconText
                icon={<FontAwesomeIcon icon={faLocationDot} />}
-               text='Newyork, NY'
+               text='New York, NY'
             />
             <IconText
                icon={<FontAwesomeIcon icon={faPhone} />}

@@ -9,7 +9,7 @@ export interface IProjData {
 export const projectData: Array<IProjData> = [
    {
       title: 'Hover Note',
-      stack: ['TypeScript', 'React', 'Redux', 'Electron.js', 'ChakraUI'],
+      stack: ['TypeScript', 'React', 'Electron.js', 'ChakraUI'],
       description: 'Hover Note is a markdown sticky notes application designed to provide a more comprehensive and extensible experience when taking and referencing notes',
       previewLink: '/images/previews/hover-preview.png',
       demoLink: 'https://github.com/tcloma/Hover-Note-FIS'
@@ -17,7 +17,7 @@ export const projectData: Array<IProjData> = [
    {
       title: 'Flypto Crypto',
       stack: ['JavaScript', 'React', 'Ruby', 'Rails', 'SASS'],
-      description: 'A mock crypto trading platform built on the idea of simplicity and transparency',
+      description: 'A mock crypto trading platform built on the idea of simplicity and transparency, with up to date prices & visualized currencry graphs',
       previewLink: '/images/previews/flypto-preview.png',
       demoLink: 'https://github.com/tcloma/Flypto-Crypto-FIS'
    },

@@ -23,6 +23,9 @@
    .input-field {
       @apply rounded-md p-4;
    }
+   .homeBtn {
+      @apply flex w-1/2 flex-row items-center justify-between rounded-md  py-4 px-6 font-semibold shadow-md duration-300 hover:bg-dWhite;
+   }
 }
 
 .slide {
@@ -37,14 +40,26 @@
    @apply flex w-[20rem] flex-row rounded-md bg-dWhite p-4 text-dBg;
 }
 
-.social-btn {
-   @apply flex w-1/5 cursor-pointer items-center rounded-md bg-dWhite p-4;
-}
-
 .navBtn {
    @apply min-w-[30px]  hover:text-dCyan lg:w-full;
 }
 
 .navBtnClicked {
    @apply min-w-[30px]  text-dCyan lg:w-full;
+}
+
+.social-btn {
+   @apply flex w-1/5 cursor-pointer items-center rounded-md bg-dWhite p-4;
+}
+
+.home-social-btn {
+   @apply flex w-1/5 cursor-pointer items-center rounded-md bg-transparent p-4 text-dWhite duration-300;
+}
+
+.project-btn {
+   @apply flex w-1/2 flex-row items-center justify-between rounded-md border-2 border-dOffBg bg-dWhite px-4 py-2 text-lg font-semibold text-dBg shadow-lg duration-300 hover:border-dBg hover:bg-dBg hover:text-dWhite;
+}
+
+.grey-btn {
+   @apply flex w-1/2 flex-row items-center justify-between rounded-md border-2 px-4 py-2 text-lg font-semibold;
 }
