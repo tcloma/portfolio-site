@@ -29,7 +29,7 @@ const Home: NextPage = () => {
    const router = useRouter()
 
    return (
-      <main className='page'>
+      <main className='page mt-10'>
          <section className='slide mt-10 gap-8'>
             <Image
                className='block rounded-full lg:hidden'

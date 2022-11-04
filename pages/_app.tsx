@@ -31,6 +31,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                href='/icons/favicon-16x16.png'
             />
             <link rel='manifest' href='/icons/site.webmanifest' />
+            <link
+               rel='stylesheet'
+               href='https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css'
+            />
          </Head>
          <Layout>
             <Transition>

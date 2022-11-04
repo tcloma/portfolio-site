@@ -9,14 +9,14 @@ export interface IProjData {
 export const projectData: Array<IProjData> = [
    {
       title: 'Hover Note',
-      stack: ['TypeScript', 'React', 'Electron.js', 'ChakraUI'],
+      stack: ['TypeScript', 'React', 'Electron', 'Nodejs', 'ChakraUI'],
       description: 'Hover Note is a markdown sticky notes application designed to provide a more comprehensive and extensible experience when taking and referencing notes',
       previewLink: '/images/previews/hover-preview.png',
       demoLink: 'https://github.com/tcloma/Hover-Note-FIS'
    },
    {
       title: 'Flypto Crypto',
-      stack: ['JavaScript', 'React', 'Ruby', 'Rails', 'SASS'],
+      stack: ['JavaScript', 'React', 'Ruby', 'Rails', 'SASS', 'sqlite'],
       description: 'A mock crypto trading platform built on the idea of simplicity and transparency, with up to date prices & visualized currencry graphs',
       previewLink: '/images/previews/flypto-preview.png',
       demoLink: 'https://github.com/tcloma/Flypto-Crypto-FIS'
@@ -30,9 +30,26 @@ export const projectData: Array<IProjData> = [
    },
    {
       title: 'Kaijugochi',
-      stack: ['JavaScript', 'Svelte', 'TailwindCSS', 'Go'],
+      stack: ['TypeScript', 'Svelte', 'TailwindCSS', 'Nodejs', 'Express', 'MongoDB'],
       description: 'A simple browser game where you can create your own monster and care for it by feeding it other monsters that appear on screen',
       previewLink: '/images/previews/kaijugochi-preview.png',
       demoLink: 'https://github.com/tcloma/Monster-Game-FIS'
    },
+]
+
+export const techStack: Array<string> = [
+   'javascript',
+   'typescript',
+   'react',
+   'svelte',
+   'tailwindcss',
+   'sass',
+   'nodejs',
+   'express',
+   'ruby',
+   'rails',
+   'firebase',
+   'mongodb',
+   'sqlite',
+   'electron',
 ]

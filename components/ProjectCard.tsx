@@ -3,12 +3,7 @@ import Image from 'next/future/image'
 import { IProjData } from '../public/data/projectData'
 import TechChip from './TechChip'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-   faGithub,
-   faLinkedin,
-   faTwitter,
-   faYoutube,
-} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 interface IProps {
    projectData: IProjData
@@ -18,7 +13,7 @@ const ProjectCard: FC<IProps> = ({ projectData }) => {
    const { title, stack, description, previewLink, demoLink } = projectData
 
    return (
-      <article className='flex min-h-[30rem] w-[22rem] flex-col items-center justify-between rounded-md bg-dWhite pb-4 text-dBg shadow-md lg:w-96'>
+      <article className='flex min-h-[32rem] w-[22rem] flex-col items-center justify-between rounded-md bg-dWhite pb-4 text-dBg shadow-md lg:w-96'>
          <div className='flex flex-col gap-4'>
             <Image
                src={previewLink}
