@@ -15,6 +15,7 @@ import {
    faTwitter,
    faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
+import Head from 'next/head'
 
 const Contact: NextPage = () => {
    const handleSubmit = (e: FormEvent) => {
@@ -23,6 +24,9 @@ const Contact: NextPage = () => {
 
    return (
       <main className='page pt-[20px] lg:flex-row lg:justify-evenly lg:pt-0 '>
+         <Head>
+            <title>tcloma.dev | Contact</title>
+         </Head>
          <section className='half-section gap-4 bg-dBg'>
             <h1 className='text-5xl font-semibold text-dCyan'> Contact Me </h1>
             <form className='relative flex w-[85%] flex-col gap-4 text-black lg:w-auto'>

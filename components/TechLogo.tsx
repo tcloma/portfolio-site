@@ -26,7 +26,7 @@ const TechLogo: FC<Props> = ({ tech, toggleFilter }) => {
 
    return (
       <div
-         className='w-10 cursor-pointer text-center duration-300 hover:scale-110 lg:w-20'
+         className='w-[4rem] mb-2  lg:mb-0 cursor-pointer text-center duration-300 hover:scale-110 lg:w-20'
          onClick={handleClick}
       >
          {clicked ? (

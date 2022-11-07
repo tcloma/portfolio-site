@@ -2,20 +2,13 @@ import type { NextPage } from 'next'
 import Image from 'next/future/image'
 import headshot from '/public/images/placeholders/placeholder-headshot.png'
 import { useRouter } from 'next/router'
-import IconText from '../components/IconText'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
    faFilePdf,
    faCode,
    faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
-import {
-   faGithub,
-   faLinkedin,
-   faTwitter,
-   faYoutube,
-} from '@fortawesome/free-brands-svg-icons'
+import Head from 'next/head'
 
 /*
 
@@ -30,6 +23,9 @@ const Home: NextPage = () => {
 
    return (
       <main className='page mt-10'>
+         <Head>
+            <title>tcloma.dev | Home</title>
+         </Head>
          <section className='slide mt-10 gap-8'>
             <Image
                className='block rounded-full lg:hidden'
@@ -70,7 +66,7 @@ const Home: NextPage = () => {
                      className='homeBtn bg-dBlue hover:text-dBlue'
                   >
                      <FontAwesomeIcon
-                        className='w-1/6 lg:w-1/12'
+                        className='w-1/6 lg:w-1/12 text-3xl'
                         icon={faEnvelope}
                      />
                      <span className='w-5/6 lg:w-11/12'>Contact</span>
@@ -84,35 +80,37 @@ const Home: NextPage = () => {
                         window.open('/data/Tyrone_Cloma_Resume.pdf')
                      }
                   >
-                     <FontAwesomeIcon className='w-1/12' icon={faFilePdf} />
+                     <FontAwesomeIcon className='w-1/12 text-2xl' icon={faFilePdf} />
                      <span className='w-11/12'>Resume</span>
                   </button>
-                  <div className='flex w-full flex-row justify-between rounded-md text-dBg lg:w-1/2'>
+                  <div className='flex w-full flex-row gap-4 justify-between rounded-md text-dBg lg:w-1/2'>
                      <div
                         onClick={() => window.open('https://github.com/tcloma')}
                         className='home-social-btn hover:bg-white hover:text-black'
                      >
-                        <FontAwesomeIcon icon={faGithub} />
+                        <i className={'devicon-github-plain text-4xl'} />
                      </div>
                      <div
                         onClick={() =>
-                           window.open(
+                           location.assign(
                               'https://www.linkedin.com/in/tyronecloma/'
                            )
                         }
                         className='home-social-btn hover:bg-[#0e76a8]'
                      >
-                        <FontAwesomeIcon icon={faLinkedin} />
+                        <i className={'devicon-linkedin-plain text-4xl'} />
                      </div>
                      <div
                         onClick={() =>
-                           window.open('https://twitter.com/TClomaDev')
+                           setTimeout(() => {
+                              window.open('https://twitter.com/TClomaDev')
+                           })
                         }
                         className='home-social-btn hover:bg-white hover:text-[#1DA1F2]'
                      >
-                        <FontAwesomeIcon icon={faTwitter} />
+                        <i className={'devicon-twitter-plain text-4xl'} />
                      </div>
-                     <div
+                     {/* <div
                         onClick={() =>
                            window.open(
                               'https://www.youtube.com/channel/UC3If51Uhyyqg4WbN8QrUulw/featured'
@@ -120,8 +118,8 @@ const Home: NextPage = () => {
                         }
                         className='home-social-btn hover:bg-white hover:text-[#c3352e]'
                      >
-                        <FontAwesomeIcon icon={faYoutube} />
-                     </div>
+                        <i className={`devicon-youtube-plain text-4xl lg:text-6xl`} />
+                     </div> */}
                   </div>
                </div>
             </div>

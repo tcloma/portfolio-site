@@ -1,4 +1,12 @@
-const techReducer = (state: any, action: any) => {
+interface ReducerState {
+   filterTech: Array<string>
+}
+interface ReducerAction {
+   type: string
+   payload: string
+}
+
+const techReducer = (state: ReducerState, action: ReducerAction) => {
    const { type, payload } = action
    switch (type) {
       case 'toggleFilter':
