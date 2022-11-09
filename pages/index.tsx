@@ -27,13 +27,7 @@ const Home: NextPage = () => {
             <title>tcloma.dev | Home</title>
          </Head>
          <section className='slide mt-10 gap-8'>
-            <Image
-               className='block rounded-full lg:hidden'
-               src={headshot}
-               alt='headshot'
-               width={250}
-               height={250}
-            />
+            <div className='block rounded-full lg:hidden' />
             <div className='flex w-full flex-col gap-4'>
                <div>
                   <h1 className='text-4xl font-semibold lg:text-7xl'>
@@ -66,7 +60,7 @@ const Home: NextPage = () => {
                      className='homeBtn bg-dBlue hover:text-dBlue'
                   >
                      <FontAwesomeIcon
-                        className='w-1/6 lg:w-1/12 text-3xl'
+                        className='w-1/6 text-3xl lg:w-1/12'
                         icon={faEnvelope}
                      />
                      <span className='w-5/6 lg:w-11/12'>Contact</span>
@@ -76,60 +70,55 @@ const Home: NextPage = () => {
                <div className='flex w-full flex-col gap-2 lg:w-2/3 lg:flex-row'>
                   <button
                      className='homeBtn w-full border-2 bg-transparent text-xl text-dWhite hover:text-dDbg lg:w-1/2'
-                     onClick={() =>
-                        window.open('/data/Tyrone_Cloma_Resume.pdf')
-                     }
+                     onClick={() => {
+                        setTimeout(() => {
+                           window.open('/data/Tyrone_Cloma_Resume.pdf')
+                        })
+                     }}
                   >
-                     <FontAwesomeIcon className='w-1/12 text-2xl' icon={faFilePdf} />
+                     <FontAwesomeIcon
+                        className='w-1/12 text-2xl'
+                        icon={faFilePdf}
+                     />
                      <span className='w-11/12'>Resume</span>
                   </button>
-                  <div className='flex w-full flex-row gap-4 justify-between rounded-md text-dBg lg:w-1/2'>
+                  <div className='flex w-full flex-row justify-between gap-4 rounded-md text-dBg lg:w-1/2'>
                      <div
-                        onClick={() => window.open('https://github.com/tcloma')}
+                        onClick={() => {
+                           setTimeout(() => {
+                              window.open('https://github.com/tcloma')
+                           })
+                        }}
                         className='home-social-btn hover:bg-white hover:text-black'
                      >
                         <i className={'devicon-github-plain text-4xl'} />
                      </div>
                      <div
-                        onClick={() =>
-                           location.assign(
-                              'https://www.linkedin.com/in/tyronecloma/'
-                           )
-                        }
+                        onClick={() => {
+                           setTimeout(() => {
+                              window.open(
+                                 'https://www.linkedin.com/in/tyronecloma/'
+                              )
+                           })
+                        }}
                         className='home-social-btn hover:bg-[#0e76a8]'
                      >
                         <i className={'devicon-linkedin-plain text-4xl'} />
                      </div>
                      <div
-                        onClick={() =>
+                        onClick={() => {
                            setTimeout(() => {
                               window.open('https://twitter.com/TClomaDev')
                            })
-                        }
+                        }}
                         className='home-social-btn hover:bg-white hover:text-[#1DA1F2]'
                      >
                         <i className={'devicon-twitter-plain text-4xl'} />
                      </div>
-                     {/* <div
-                        onClick={() =>
-                           window.open(
-                              'https://www.youtube.com/channel/UC3If51Uhyyqg4WbN8QrUulw/featured'
-                           )
-                        }
-                        className='home-social-btn hover:bg-white hover:text-[#c3352e]'
-                     >
-                        <i className={`devicon-youtube-plain text-4xl lg:text-6xl`} />
-                     </div> */}
                   </div>
                </div>
             </div>
-            <Image
-               className='hidden rounded-full lg:block'
-               src={headshot}
-               alt='headshot'
-               width={600}
-               height={800}
-            />
+            {/* <div className='hidden rounded-full lg:block' /> */}
          </section>
       </main>
    )

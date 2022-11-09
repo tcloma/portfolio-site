@@ -10,10 +10,10 @@ interface IProps {
 }
 
 const ProjectCard: FC<IProps> = ({ projectData }) => {
-   const { title, stack, description, previewLink, demoLink } = projectData
+   const { title, stack, description, previewLink, githubLink, demoLink } = projectData
 
    return (
-      <article className='flex min-h-[32rem] w-[22rem] flex-col items-center justify-between rounded-md bg-dWhite pb-4 text-dBg shadow-md lg:w-96'>
+      <article className='flex min-h-[32rem] w-[19rem] flex-col items-center justify-between rounded-md bg-dWhite pb-4 text-dBg shadow-md lg:w-96'>
          <div className='flex flex-col gap-4'>
             <Image
                src={previewLink}
@@ -34,16 +34,23 @@ const ProjectCard: FC<IProps> = ({ projectData }) => {
          </div>
          <div className='flex h-12 w-[90%] gap-2'>
             <button
-               onClick={() => window.open(demoLink)}
+               onClick={() => window.open(githubLink)}
                className='project-btn'
             >
                <FontAwesomeIcon className='w-1/6' icon={faGithub} />
                <span className='w-5/6'> Code </span>
             </button>
-            <button className='grey-btn cursor-default text-gray-300'>
-               <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
-               <span className='w-5/6'> Demo </span>
-            </button>
+            {demoLink === '' ?
+               <button className='grey-btn cursor-default text-gray-300'>
+                  <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
+                  <span className='w-5/6'> Demo </span>
+               </button>
+               :
+               <button onClick={() => { window.open }} className='project-btn'>
+                  <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
+                  <span className='w-5/6'> Demo </span>
+               </button>
+            }
          </div>
       </article>
    )
