@@ -1,5 +1,6 @@
 import { NextPage } from 'next'
-import { FormEvent } from 'react'
+import Head from 'next/head'
+import { FormEvent, useRef } from 'react'
 import IconText from '../components/IconText'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -15,11 +16,65 @@ import {
    faTwitter,
    faYoutube,
 } from '@fortawesome/free-brands-svg-icons'
-import Head from 'next/head'
+// import isEmail from 'validator/lib/isEmail'
+import { toast } from 'react-hot-toast'
 
 const Contact: NextPage = () => {
+
+   const nameRef = useRef<HTMLInputElement>(null)
+   const emailRef = useRef<HTMLInputElement>(null)
+   const subjectRef = useRef<HTMLInputElement>(null)
+   const messageRef = useRef<HTMLTextAreaElement>(null)
+
+   interface formData {
+      name: string,
+      email: string,
+      subject: string,
+      message: string,
+   }
+
    const handleSubmit = (e: FormEvent) => {
       e.preventDefault()
+      const formData: formData = {
+         name: nameRef.current!.value,
+         email: emailRef.current!.value,
+         subject: subjectRef.current!.value,
+         message: messageRef.current!.value,
+      }
+      validateData(formData)
+   }
+
+   const errorToast = (message: string) => {
+      toast.error(message, {
+         position: 'bottom-center',
+         style: {
+            backgroundColor: '#1c1d26',
+            color: '#FFFFFF'
+         }
+      })
+   }
+
+   const isEmail = (email: string) => {
+      return /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+   }
+
+   const validateData = (data: formData) => {
+      const { name, email, subject, message } = data
+      if (!name) return errorToast('Name field is empty')
+      if (!subject) return errorToast('Subject field is empty')
+      if (!message) return errorToast('Message field is empty')
+      if (!email) {
+         return errorToast('Email field is empty')
+      } else if (!isEmail(email)) {
+         return errorToast('Invalid email format')
+      }
+      toast.success('Email has been sent!', {
+         position: 'bottom-center',
+         style: {
+            backgroundColor: '#1c1d26',
+            color: '#FFFFFF'
+         }
+      })
    }
 
    return (
@@ -31,13 +86,14 @@ const Contact: NextPage = () => {
             <h1 className='text-5xl font-semibold text-dCyan'> Contact Me </h1>
             <form className='relative flex w-[85%] flex-col gap-4 text-black lg:w-auto'>
                <div className='flex flex-row gap-3'>
-                  <input className='input-field w-1/2' placeholder='Name' />
-                  <input className='input-field w-1/2' placeholder='Email' />
+                  <input className='input-field w-1/2' placeholder='Name' ref={nameRef} />
+                  <input className='input-field w-1/2' placeholder='Email' ref={emailRef} />
                </div>
-               <input className='input-field' placeholder='Subject' />
+               <input className='input-field' placeholder='Subject' ref={subjectRef} />
                <textarea
                   className='input-field min-h-[20rem]'
                   placeholder='Message'
+                  ref={messageRef}
                />
                <button
                   onClick={(e) => handleSubmit(e)}

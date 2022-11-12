@@ -46,7 +46,7 @@ const ProjectCard: FC<IProps> = ({ projectData }) => {
                   <span className='w-5/6'> Demo </span>
                </button>
                :
-               <button onClick={() => { window.open }} className='project-btn'>
+               <button onClick={() => { window.open(demoLink) }} className='project-btn'>
                   <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
                   <span className='w-5/6'> Demo </span>
                </button>

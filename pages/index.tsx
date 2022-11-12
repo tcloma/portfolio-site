@@ -71,9 +71,7 @@ const Home: NextPage = () => {
                   <button
                      className='homeBtn w-full border-2 bg-transparent text-xl text-dWhite hover:text-dDbg lg:w-1/2'
                      onClick={() => {
-                        setTimeout(() => {
-                           window.open('/data/Tyrone_Cloma_Resume.pdf')
-                        })
+                        window.open('/data/Tyrone_Cloma_Resume.pdf')
                      }}
                   >
                      <FontAwesomeIcon
@@ -85,9 +83,7 @@ const Home: NextPage = () => {
                   <div className='flex w-full flex-row justify-between gap-4 rounded-md text-dBg lg:w-1/2'>
                      <div
                         onClick={() => {
-                           setTimeout(() => {
-                              window.open('https://github.com/tcloma')
-                           })
+                           window.open('https://github.com/tcloma')
                         }}
                         className='home-social-btn hover:bg-white hover:text-black'
                      >
@@ -95,11 +91,9 @@ const Home: NextPage = () => {
                      </div>
                      <div
                         onClick={() => {
-                           setTimeout(() => {
-                              window.open(
-                                 'https://www.linkedin.com/in/tyronecloma/'
-                              )
-                           })
+                           window.open(
+                              'https://www.linkedin.com/in/tyronecloma/'
+                           )
                         }}
                         className='home-social-btn hover:bg-[#0e76a8]'
                      >
@@ -107,9 +101,7 @@ const Home: NextPage = () => {
                      </div>
                      <div
                         onClick={() => {
-                           setTimeout(() => {
-                              window.open('https://twitter.com/TClomaDev')
-                           })
+                           window.open('https://twitter.com/TClomaDev')
                         }}
                         className='home-social-btn hover:bg-white hover:text-[#1DA1F2]'
                      >
