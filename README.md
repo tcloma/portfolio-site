@@ -1,11 +1,17 @@
 # Personal Portflio Website
 
-### Built with:
+### Built using:
 - Next.js
 - React
-- TypeScript
 - TailwindCSS
+- TypeScript
+
+### Additional libraries:
 - Framer Motion
 - React Hot Toast
+- FontAwesome
+- EmailJS
 
-### Deployed on 
+<hr>
+
+#### Deployed at [tcloma.dev](https://tcloma.dev) using vercel
