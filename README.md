@@ -1,34 +1,11 @@
-# This is the public repository for my Next.js + TailwindCSS portfolio website
+# Personal Portflio Website
 
-### General Idea
+### Built with:
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+- Framer Motion
+- React Hot Toast
 
--  Vertical Slideshow Layout
--  Responsive
--  Simplistic but animation heavy (esp scroll animations)
-
-### Nav Tabs:
-
--  About
--  Projects
--  Socials on the right side as buttons
-   -  Github
-   -  Twitter
-   -  LinkedIn
-
-### To do:
-
--  Simplistic nav on the side representing each "slide" were on
-   -  On hover shows the `href` title of that slide
-   -  maybe add capability for keyboard only navigation
--  Each slide will have a different influence on the background
-   -  Slides will mostly be projects
-   -  Contains:
-      -  Project title and tech stack used as chips
-      -  Relevant links (eg. Deployed / Github)
-      -  Projects demo
-      -  Brief description
-      -  Lessons / challenges
-
-## Tentative wireframe of layout
-
-![wireframe](/public/wireframe.png)
+### Deployed on 
