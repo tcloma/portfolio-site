@@ -1,16 +1,18 @@
 # Personal Portflio Website
 
 ### Built using:
-- Next.js
-- React
-- TailwindCSS
-- TypeScript
+
+-  Next.js
+-  React
+-  TailwindCSS
+-  TypeScript
 
 ### Additional libraries:
-- Framer Motion
-- React Hot Toast
-- FontAwesome
-- EmailJS
+
+-  Framer Motion
+-  React Hot Toast
+-  FontAwesome
+-  EmailJS
 
 <hr>
 
