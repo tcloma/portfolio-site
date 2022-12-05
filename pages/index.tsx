@@ -39,9 +39,10 @@ const Home: NextPage = () => {
                </div>
                <div className='text-md font-light lg:text-xl'>
                   <p>
-                     Fullstack Developer based in New York & Flatiron Graduate
+                     Full Stack Developer based in New York & Flatiron Graduate
                   </p>
                   <p>I create responsive and efficient web applications</p>
+                  <p>Passionate about design, programming, and gaming</p>
                </div>
 
                <div className='flex w-full gap-2 text-xl lg:w-2/3'>

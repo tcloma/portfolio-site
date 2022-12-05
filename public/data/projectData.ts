@@ -34,7 +34,7 @@ export const projectData: Array<IProjData> = [
    },
    {
       title: 'Kaijugochi',
-      stack: ['TypeScript', 'Svelte', 'TailwindCSS', 'Nodejs', 'Express', 'MongoDB'],
+      stack: ['TypeScript', 'Nodejs', 'Express'],
       description: 'A simple browser game where you can create your own monster and care for it by feeding it other monsters that appear on screen',
       previewLink: '/images/previews/kaijugochi-preview.png',
       githubLink: 'https://github.com/tcloma/Monster-Game-FIS',
