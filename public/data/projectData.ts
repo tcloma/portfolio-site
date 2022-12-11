@@ -22,7 +22,7 @@ export const projectData: Array<IProjData> = [
       description: 'A mock crypto trading platform built on the idea of simplicity and transparency, with up to date prices & visualized currencry graphs',
       previewLink: '/images/previews/flypto-preview.png',
       githubLink: 'https://github.com/tcloma/Flypto-Crypto-FIS',
-      demoLink: ''
+      demoLink: 'https://www.youtube.com/watch?v=YbXkZPx_kL4'
    },
    {
       title: 'Cosmo Quizzer',
