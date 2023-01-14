@@ -2,8 +2,7 @@ import { FC } from 'react'
 import Image from 'next/future/image'
 import { IProjData } from '../public/data/projectData'
 import TechChip from './TechChip'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { FaGithub, FaYoutube } from 'react-icons/fa'
 
 interface IProps {
    projectData: IProjData
@@ -37,17 +36,17 @@ const ProjectCard: FC<IProps> = ({ projectData }) => {
                onClick={() => window.open(githubLink)}
                className='project-btn'
             >
-               <FontAwesomeIcon className='w-1/6' icon={faGithub} />
+               <FaGithub className='w-1/6' />
                <span className='w-5/6'> Code </span>
             </button>
             {demoLink === '' ?
                <button className='grey-btn cursor-default text-gray-300'>
-                  <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
+                  <FaYoutube className='w-1/6' />
                   <span className='w-5/6'> Demo </span>
                </button>
                :
                <button onClick={() => { window.open(demoLink) }} className='project-btn'>
-                  <FontAwesomeIcon className='w-1/6' icon={faYoutube} />
+                  <FaYoutube className='w-1/6' />
                   <span className='w-5/6'> Demo </span>
                </button>
             }

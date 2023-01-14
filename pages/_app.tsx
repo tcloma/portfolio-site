@@ -5,16 +5,16 @@ import Transition from '../components/layouts/Transition'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
-   return (
-      <>
-         <Layout>
-            <Transition>
-               <Component {...pageProps} />
-            </Transition>
-         </Layout>
-         <Toaster />
-      </>
-   )
+    return (
+        <>
+            <Layout>
+                <Transition>
+                    <Component {...pageProps} />
+                </Transition>
+            </Layout>
+            <Toaster />
+        </>
+    )
 }
 
 export default MyApp
