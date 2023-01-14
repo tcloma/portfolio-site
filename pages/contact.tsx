@@ -84,10 +84,6 @@ const Contact: NextPage = () => {
                     icon={<FaMapPin />}
                     text='New York, NY'
                 />
-                {/* <IconText
-               icon={<FontAwesomeIcon icon={faPhone} />}
-               text='929 - 398 - 1598'
-            /> */}
                 <IconText
                     icon={<FaAt />}
                     text='tyrone.cloma0219@gmail.com'

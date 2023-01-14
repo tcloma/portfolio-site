@@ -7,14 +7,6 @@ import {
 } from 'react-icons/fa'
 import Head from 'next/head'
 
-/*
-
-   Note on Mac / OSX compatiblity:
-   window.open() doesn't work
-   try: location.href='link'
-
-*/
-
 const Home: NextPage = () => {
     const router = useRouter()
 
