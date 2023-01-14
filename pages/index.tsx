@@ -18,20 +18,21 @@ const Home: NextPage = () => {
             <section className='slide mt-10 gap-8'>
                 <div className='block rounded-full lg:hidden' />
                 <div className='flex w-full flex-col gap-4'>
-                    <div>
+                    <div className='flex flex-col gap-2 items-center lg:items-start'>
                         <h1 className='text-4xl font-semibold lg:text-7xl'>
                             Tyrone Cloma
                         </h1>
-                        <h1 className='text-xl text-dCyan lg:text-3xl'>
+                        <h2 className='text-2xl text-dCyan lg:text-3xl'>
                             Software Engineer
-                        </h1>
+                        </h2>
                     </div>
-                    <div className='text-md font-light lg:text-xl'>
-                        <p>
-                            Full Stack Developer based in New York & Flatiron Graduate
+                    <div className='text-md font-light lg:text-lg'>
+                        <p className='text-justify lg:w-2/3 indent-8'>
+                            Full Stack Developer based in New York looking to take
+                            the tech industry by storm! Bootcamp graduate adept at working
+                            in a fast paced environment, and an ever curious mind
+                            passionate about design, programming, and gaming.
                         </p>
-                        <p>I create responsive and efficient web applications</p>
-                        <p>Passionate about design, programming, and gaming</p>
                     </div>
 
                     <div className='flex w-full gap-2 text-xl lg:w-2/3'>

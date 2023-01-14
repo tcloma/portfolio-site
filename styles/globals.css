@@ -18,7 +18,7 @@
 
 @layer components {
    .page {
-      @apply flex min-h-screen flex-col items-center justify-center bg-dBg text-dWhite lg:pt-0;
+      @apply flex min-h-screen flex-col items-center justify-center bg-dBg text-dWhite lg:pt-0 antialiased;
    }
    .input-field {
       @apply rounded-md p-4;
